@@ -88,7 +88,9 @@ public class GeolocatorLocationService extends Service {
     if(cancellationRequested) {
        return listenerCount == 1;
     }
-    return connectedEngines == 0;
+
+    // Remote messaging adds an additional engine. 
+    return connectedEngines <= 1;
   }
 
   public void flutterEngineConnected() {
