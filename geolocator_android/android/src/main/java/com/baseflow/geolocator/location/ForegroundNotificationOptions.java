@@ -18,9 +18,10 @@ public class ForegroundNotificationOptions {
     private final boolean enableWifiLock;
     @NonNull
     private final boolean enableWakeLock;
-
     @NonNull
     private final boolean setOngoing;
+    @NonNull
+    private final int notificationColor;
 
 
     public static ForegroundNotificationOptions parseArguments(@Nullable  Map<String, Object> arguments) {
@@ -34,6 +35,7 @@ public class ForegroundNotificationOptions {
     final Boolean enableWifiLock = (Boolean) arguments.get("enableWifiLock");
     final Boolean enableWakeLock = (Boolean) arguments.get("enableWakeLock");
     final Boolean setOngoing = (Boolean) arguments.get("setOngoing");
+    final int notificationColor = (int) arguments.get("notificationColor");
 
 
     return new ForegroundNotificationOptions(
@@ -42,16 +44,18 @@ public class ForegroundNotificationOptions {
             notificationIcon,
             enableWifiLock,
             enableWakeLock,
-            setOngoing);
+            setOngoing,
+            notificationColor,);
   }
 
-    private ForegroundNotificationOptions(String notificationTitle, String notificationText, AndroidIconResource notificationIcon, boolean enableWifiLock, boolean enableWakeLock, boolean setOngoing) {
+    private ForegroundNotificationOptions(String notificationTitle, String notificationText, AndroidIconResource notificationIcon, boolean enableWifiLock, boolean enableWakeLock, boolean setOngoing, int notificationColor) {
         this.notificationTitle = notificationTitle;
         this.notificationText = notificationText;
         this.notificationIcon = notificationIcon;
         this.enableWifiLock = enableWifiLock;
         this.enableWakeLock = enableWakeLock;
         this.setOngoing = setOngoing;
+        this.notificationColor = notificationColor;
     }
 
     public String getNotificationTitle() {
@@ -76,6 +80,10 @@ public class ForegroundNotificationOptions {
 
     public boolean isSetOngoing() {
         return setOngoing;
+    }
+
+    public boolean getNotificationColor() {
+        return notificationColor;
     }
 
 }
