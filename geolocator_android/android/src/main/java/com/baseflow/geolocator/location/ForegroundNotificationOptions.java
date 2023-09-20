@@ -45,7 +45,7 @@ public class ForegroundNotificationOptions {
             enableWifiLock,
             enableWakeLock,
             setOngoing,
-            notificationColor,);
+            notificationColor);
   }
 
     private ForegroundNotificationOptions(String notificationTitle, String notificationText, AndroidIconResource notificationIcon, boolean enableWifiLock, boolean enableWakeLock, boolean setOngoing, int notificationColor) {
