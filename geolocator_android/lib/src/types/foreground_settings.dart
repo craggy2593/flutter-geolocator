@@ -63,7 +63,7 @@ class ForegroundNotificationConfig {
   /// Wi-Fi radio awake, even when the user has not used the device in a while.
   ///
   /// The title used for the foreground service notification.
-  final int? notificationColor;
+  final int notificationColor;
 
   const ForegroundNotificationConfig({
     required this.notificationTitle,
@@ -73,7 +73,7 @@ class ForegroundNotificationConfig {
     this.enableWifiLock = false,
     this.enableWakeLock = false,
     this.setOngoing = false,
-    this.notificationColor,
+    this.notificationColor = 0,
   });
 
   /// Returns a JSON representation of this class.
