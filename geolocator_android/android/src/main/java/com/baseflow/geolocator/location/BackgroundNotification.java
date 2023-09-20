@@ -88,7 +88,7 @@ public class BackgroundNotification {
                 .setContentIntent(buildBringToFrontIntent())
                 .setOngoing(options.isSetOngoing());
 
-        if (options.color != null) {
+        if (options.getNotificationColor() != null) {
             builder.setColor(options.getNotificationColor()).setColorized(true);
         }
 

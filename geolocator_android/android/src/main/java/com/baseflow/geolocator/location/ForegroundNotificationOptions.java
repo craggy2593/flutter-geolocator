@@ -82,7 +82,7 @@ public class ForegroundNotificationOptions {
         return setOngoing;
     }
 
-    public boolean getNotificationColor() {
+    public int getNotificationColor() {
         return notificationColor;
     }
 
