@@ -61,6 +61,10 @@ class ForegroundNotificationConfig {
   /// [enableWifiLock] indicates wether or not a WifiLock is acquired, when the
   /// background execution is started. This allows the application to keep the
   /// Wi-Fi radio awake, even when the user has not used the device in a while.
+  ///
+  /// The title used for the foreground service notification.
+  final int? notificationColor;
+
   const ForegroundNotificationConfig({
     required this.notificationTitle,
     required this.notificationText,
@@ -69,6 +73,7 @@ class ForegroundNotificationConfig {
     this.enableWifiLock = false,
     this.enableWakeLock = false,
     this.setOngoing = false,
+    this.notificationColor,
   });
 
   /// Returns a JSON representation of this class.
@@ -80,6 +85,7 @@ class ForegroundNotificationConfig {
       'enableWifiLock': enableWifiLock,
       'enableWakeLock': enableWakeLock,
       'setOngoing': setOngoing,
+      'notificationColor': notificationColor,
     };
   }
 }
