@@ -21,7 +21,7 @@ public class ForegroundNotificationOptions {
     @NonNull
     private final boolean setOngoing;
     @NonNull
-    private final int notificationColor;
+    private final Long notificationColor;
 
 
     public static ForegroundNotificationOptions parseArguments(@Nullable  Map<String, Object> arguments) {
@@ -35,7 +35,7 @@ public class ForegroundNotificationOptions {
     final Boolean enableWifiLock = (Boolean) arguments.get("enableWifiLock");
     final Boolean enableWakeLock = (Boolean) arguments.get("enableWakeLock");
     final Boolean setOngoing = (Boolean) arguments.get("setOngoing");
-    final int notificationColor = (int) arguments.get("notificationColor");
+    final Long notificationColor = (Long) arguments.get("notificationColor");
 
 
     return new ForegroundNotificationOptions(
@@ -48,7 +48,7 @@ public class ForegroundNotificationOptions {
             notificationColor);
   }
 
-    private ForegroundNotificationOptions(String notificationTitle, String notificationText, AndroidIconResource notificationIcon, boolean enableWifiLock, boolean enableWakeLock, boolean setOngoing, int notificationColor) {
+    private ForegroundNotificationOptions(String notificationTitle, String notificationText, AndroidIconResource notificationIcon, boolean enableWifiLock, boolean enableWakeLock, boolean setOngoing, Long notificationColor) {
         this.notificationTitle = notificationTitle;
         this.notificationText = notificationText;
         this.notificationIcon = notificationIcon;
@@ -82,7 +82,7 @@ public class ForegroundNotificationOptions {
         return setOngoing;
     }
 
-    public int getNotificationColor() {
+    public Long getNotificationColor() {
         return notificationColor;
     }
 
