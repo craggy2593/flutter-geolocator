@@ -21,7 +21,7 @@ dependencies:
   flutter:
     sdk: flutter
   geolocator_platform_interface: ^4.0.4
-  uuid: ^3.0.7
+  uuid: ^4.0.0
 
 dev_dependencies:
   async: ^2.8.2
