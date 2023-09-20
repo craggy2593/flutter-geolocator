@@ -86,11 +86,8 @@ public class BackgroundNotification {
                 .setSmallIcon(iconId)
                 .setContentText(options.getNotificationText())
                 .setContentIntent(buildBringToFrontIntent())
-                .setOngoing(options.isSetOngoing());
-
-        if (options.getNotificationColor() != null) {
-            builder.setColor(options.getNotificationColor()).setColorized(true);
-        }
+                .setOngoing(options.isSetOngoing())
+                .setColor(options.getNotificationColor()).setColorized(true);
 
         if (notify) {
             NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
