@@ -206,6 +206,7 @@ public class GeolocatorPlugin implements FlutterPlugin, ActivityAware {
     if (streamHandler != null) {
       streamHandler.setForegroundLocationService(service);
     }
+    Log.d(TAG, "Initialized Geolocator services");
   }
 
   private void dispose() {

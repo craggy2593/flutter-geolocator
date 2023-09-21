@@ -221,6 +221,7 @@ public class GeolocatorLocationService extends Service {
     }
 
     public GeolocatorLocationService getLocationService() {
+      Log.d(TAG, "Returning locationService");
       return locationService;
     }
   }

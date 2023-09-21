@@ -40,6 +40,7 @@ class StreamHandlerImpl implements EventChannel.StreamHandler {
 
   public void setForegroundLocationService(
       @Nullable GeolocatorLocationService foregroundLocationService) {
+        Log.d(TAG, "Settng ForegroundLocationService");
     this.foregroundLocationService = foregroundLocationService;
   }
 
