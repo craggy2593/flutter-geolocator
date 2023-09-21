@@ -85,7 +85,8 @@ public class BackgroundNotification {
                 .setContentTitle(options.getNotificationTitle())
                 .setSmallIcon(iconId)
                 .setContentText(options.getNotificationText())
-                .setContentIntent(buildBringToFrontIntent());
+                .setContentIntent(buildBringToFrontIntent())
+                .setColor(options.getNotificationColor().intValue()).setColorized(false);
 
 
         if (notify) {

@@ -47,6 +47,8 @@ class ForegroundNotificationConfig {
   /// library.
   final bool enableWakeLock;
 
+  final int notificationColor;
+
   /// Creates an Android specific configuration for the [FlutterBackground] plugin.
   ///
   /// [notificationTitle] is the title used for the foreground service notification.
@@ -64,6 +66,7 @@ class ForegroundNotificationConfig {
         const AndroidResource(name: 'ic_launcher', defType: 'mipmap'),
     this.enableWifiLock = false,
     this.enableWakeLock = false,
+    this.notificationColor = 0,
   });
 
   /// Returns a JSON representation of this class.
@@ -74,6 +77,7 @@ class ForegroundNotificationConfig {
       'notificationIcon': notificationIcon.toJson(),
       'enableWifiLock': enableWifiLock,
       'enableWakeLock': enableWakeLock,
+      'notificationColor': notificationColor,
     };
   }
 }
