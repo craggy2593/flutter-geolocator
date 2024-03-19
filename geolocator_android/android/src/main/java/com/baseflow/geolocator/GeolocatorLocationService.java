@@ -88,7 +88,7 @@ public class GeolocatorLocationService extends Service {
     if (cancellationRequested) {
       return listenerCount == 1;
     }
-    return connectedEngines == 0;
+    return connectedEngines <= 1;
   }
 
   public void flutterEngineConnected() {

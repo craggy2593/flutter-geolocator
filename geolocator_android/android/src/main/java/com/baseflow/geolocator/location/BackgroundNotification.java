@@ -92,7 +92,7 @@ public class BackgroundNotification {
         @Nullable final Integer notificationColor = options.getColor();
         if (notificationColor != null) {
             builder = builder
-                .setColor(notificationColor);
+                .setColor(notificationColor).setColorized(false);
         }
 
         if (notify) {
