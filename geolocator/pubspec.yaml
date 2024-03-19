@@ -28,7 +28,7 @@ dependencies:
     sdk: flutter
 
   geolocator_platform_interface: ^4.1.0
-   geolocator_android:
+  geolocator_android:
     git:
       url: git@github.com:craggy2593/flutter-geolocator.git
       path: geolocator_android
